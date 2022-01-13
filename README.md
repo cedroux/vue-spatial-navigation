@@ -1,5 +1,12 @@
 # vue-js-spatial-navigation [![npm version](http://img.shields.io/npm/v/vue-js-spatial-navigation.svg?style=flat)](https://npmjs.org/package/vue-js-spatial-navigation "View this project on npm")
 
+Forked from [spacerefugee](https://github.com/spacerefugee/vue-js-spatial-navigation)
+
+### Updated to be compatible with Vue3
+
+- Added mouse support
+- Added enter key up trigger @click event
+
 Vue directive of [js-spatial-navigation](https://github.com/luke-chang/js-spatial-navigation);
 
 ## Installation
@@ -39,9 +46,10 @@ const config = {
   enterTo: "",
   leaveFor: null,
   restrict: "self-first",
-  tabIndexIgnoreList: "a, input, select, textarea, button, iframe, [contentEditable=true]",
+  tabIndexIgnoreList:
+    "a, input, select, textarea, button, iframe, [contentEditable=true]",
   navigableFilter: null,
-  scrollOptions: { behavior: "smooth", block: "center" }
+  scrollOptions: { behavior: "smooth", block: "center" },
 };
 Vue.use(vjsn, config);
 ```
@@ -72,22 +80,42 @@ The element with `v-focus` must under the element with `v-focus-section`, see [v
 #### dynamic control
 
 ```html
-<div v-focus="focusable">
-  <div></div>
-</div>
+<template>
+  <div v-focus="focusable">
+    <div></div>
+  </div>
+</template>
 
 <script>
   export default {
     data() {
       return {
-        focusable: false
+        focusable: false,
       };
     },
     methods: {
       changeFocusable() {
         this.focusable = !this.focusable;
-      }
-    }
+      },
+    },
+  };
+</script>
+```
+
+Button action - Will be triggered by both enter key & mouse click
+
+```html
+<template>
+  <div v-focus @click="myFunction">Click me</div>
+</template>
+
+<script>
+  export default {
+    methods: {
+      myFunction() {
+        console.log("Clicked");
+      },
+    },
   };
 </script>
 ```
@@ -149,14 +177,14 @@ See [SpatialNavigation.disable()](https://github.com/luke-chang/js-spatial-navig
   export default {
     data() {
       return {
-        disable: false
+        disable: false,
       };
     },
     methods: {
       changeDisable() {
         this.disable = !this.disable;
-      }
-    }
+      },
+    },
   };
 </script>
 ```
