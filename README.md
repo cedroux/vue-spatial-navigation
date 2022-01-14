@@ -10,6 +10,9 @@ Forked from [spacerefugee](https://github.com/spacerefugee/vue-js-spatial-naviga
 
 Vue directive of [js-spatial-navigation](https://github.com/luke-chang/js-spatial-navigation);
 
+## TODO
+- Go through commits on https://github.com/smart-powers/js-spatial-navigation
+
 ## Installation
 
 ### NPM
