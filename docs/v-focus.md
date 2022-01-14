@@ -41,7 +41,7 @@ Button action - Will be triggered by both enter key & mouse click
 
 ```html
 <template>
-  <div v-focus v-sn-event="{ 'enter-up': myFunction }>Click me</div>
+  <div v-focus v-sn-event="{ 'enter-up': myFunction }">Click me</div>
 </template>
 
 <script>
