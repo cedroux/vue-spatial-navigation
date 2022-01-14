@@ -37,7 +37,8 @@ The element with `v-focus` must under the element with `v-focus-section`, see [v
 
 ## Button click
 
-Button action - Will be triggered by both enter key & mouse click
+Button action - Will be triggered by both enter key & mouse click \
+[Events documentation](https://github.com/Syncronet-APS/vue-js-spatial-navigation/blob/master/docs/v-focus-events.md)
 
 ```html
 <template>
