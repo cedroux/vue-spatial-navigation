@@ -6,7 +6,7 @@ Forked from [spacerefugee](https://github.com/spacerefugee/vue-js-spatial-naviga
 
 - Added mouse support
 - Added click event trigger key-up on focused element
-- Added directive 'v-sn-event' for spatial navigation custom events
+- Added directive 'v-focus-events' for spatial navigation custom events
 
 Vue directive of [js-spatial-navigation](https://github.com/luke-chang/js-spatial-navigation);
 
@@ -66,126 +66,10 @@ A global Vue instance property for [SpatialNavigation](https://github.com/luke-c
 this.$SpatialNavigation;
 ```
 
-### `v-focus`
+### [`v-focus`](https://github.com/Syncronet-APS/vue-js-spatial-navigation/blob/master/docs/v-focus.md)
 
-A directive that make the element focusable.
+### [`v-focus-events`](https://github.com/Syncronet-APS/vue-js-spatial-navigation/blob/master/docs/v-focus-events.md)
 
-The element with `v-focus` must under the element with `v-focus-section`, see [v-focus-section](#v-focus-section)
+### [`v-focus-section`](<(https://github.com/Syncronet-APS/vue-js-spatial-navigation/blob/master/docs/v-focus-section.md)>)
 
-```html
-<div v-focus>
-  <div></div>
-</div>
-```
-
-#### dynamic control
-
-```html
-<template>
-  <div v-focus="focusable">
-    <div></div>
-  </div>
-</template>
-
-<script>
-  export default {
-    data() {
-      return {
-        focusable: false,
-      };
-    },
-    methods: {
-      changeFocusable() {
-        this.focusable = !this.focusable;
-      },
-    },
-  };
-</script>
-```
-
-Button action - Will be triggered by both enter key & mouse click
-
-```html
-<template>
-  <div v-focus @click="myFunction">Click me</div>
-</template>
-
-<script>
-  export default {
-    methods: {
-      myFunction() {
-        console.log("Clicked");
-      },
-    },
-  };
-</script>
-```
-
-### `v-focus-section`
-
-A directive that define a focus [Section](https://github.com/luke-chang/js-spatial-navigation#spatialnavigationaddsectionid-config)
-
-```html
-<div v-focus-section>
-  <div v-focus>
-    <div></div>
-  </div>
-  <div v-focus>
-    <div></div>
-  </div>
-</div>
-```
-
-#### Pass a specified section id
-
-```html
-<!-- section id -->
-<div v-focus-section:my-section>
-  <div v-focus></div>
-</div>
-```
-
-#### Set configuration
-
-```html
-<!-- set configuration -->
-<div v-focus-section:my-section="{enterTo:'last-focused'}">
-  <div v-focus></div>
-</div>
-```
-
-#### Set default section
-
-```html
-<!-- set default section -->
-<div v-focus-section:my-section.default="{enterTo:'last-focused'}">
-  <div v-focus></div>
-</div>
-```
-
-### `v-disable-focus-section`
-
-This directive will make the conponemt unnavigable.
-See [SpatialNavigation.disable()](https://github.com/luke-chang/js-spatial-navigation#spatialnavigationdisablesectionid),
-[SpatialNavigation.enable()](https://github.com/luke-chang/js-spatial-navigation#spatialnavigationenablesectionid).
-
-```html
-<div v-focus-section v-disable-focus-section="disable">
-  <div v-focus></div>
-</div>
-
-<script>
-  export default {
-    data() {
-      return {
-        disable: false,
-      };
-    },
-    methods: {
-      changeDisable() {
-        this.disable = !this.disable;
-      },
-    },
-  };
-</script>
-```
+### [`v-disable-focus-section`](<(https://github.com/Syncronet-APS/vue-js-spatial-navigation/blob/master/docs/v-disable-focus-section.md)>)
