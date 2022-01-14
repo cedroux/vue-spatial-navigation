@@ -10,6 +10,9 @@ Forked from [spacerefugee](https://github.com/spacerefugee/vue-js-spatial-naviga
 
 Vue directive of [js-spatial-navigation](https://github.com/luke-chang/js-spatial-navigation);
 
+We will try to stay synced with spacerefugee, but might diverge later on. \
+Our (might not be same as spacerefugee's) goal is to have a library containing the tools you need to create a tv app with Vue for all tv platforms possible. At the moment we have only tested on WebOS & Tizen, we will expand to tvOS & AndroidTV later.
+
 ## TODO
 ### Go through commits on 
 - https://github.com/smart-powers/js-spatial-navigation
