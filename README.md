@@ -18,7 +18,7 @@ Vue directive of [js-spatial-navigation](https://github.com/luke-chang/js-spatia
     - replace remaining var to let/const
     - replace 'extend' functino to spread operator
     - for in => Object.keys().forEach
-    - etc...
+    - etc... -> There is a lot of different things that is worth taking a look at
 - https://github.com/alex2844/js-spatial-navigation
     - add function SpatialNavigation.getSections 
     - add function SpatialNavigation.move && SpatialNavigation.getSections 
