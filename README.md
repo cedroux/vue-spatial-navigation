@@ -5,7 +5,8 @@ Forked from [spacerefugee](https://github.com/spacerefugee/vue-js-spatial-naviga
 ### Updated to be compatible with Vue3
 
 - Added mouse support
-- Added enter key up trigger @click event
+- Added click event trigger key-up on focused element
+- Added directive 'v-sn-event' for spatial navigation custom events
 
 Vue directive of [js-spatial-navigation](https://github.com/luke-chang/js-spatial-navigation);
 
