@@ -70,6 +70,6 @@ this.$SpatialNavigation;
 
 ### [`v-focus-events`](https://github.com/Syncronet-APS/vue-js-spatial-navigation/blob/master/docs/v-focus-events.md)
 
-### [`v-focus-section`](<(https://github.com/Syncronet-APS/vue-js-spatial-navigation/blob/master/docs/v-focus-section.md)>)
+### [`v-focus-section`](https://github.com/Syncronet-APS/vue-js-spatial-navigation/blob/master/docs/v-focus-section.md)
 
-### [`v-disable-focus-section`](<(https://github.com/Syncronet-APS/vue-js-spatial-navigation/blob/master/docs/v-disable-focus-section.md)>)
+### [`v-disable-focus-section`](https://github.com/Syncronet-APS/vue-js-spatial-navigation/blob/master/docs/v-disable-focus-section.md)
