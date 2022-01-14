@@ -1,7 +1,7 @@
 # `v-focus-events`
 
 Original documentation can be found here: https://github.com/luke-chang/js-spatial-navigation#events \
-Just notice that this wrapper library prefixes events with `sn:` so you wont have to define this. \
+Notice that this wrapper library prefixes events with `sn:` so you wont have to define it. \
 Available events
 
 <ol>
