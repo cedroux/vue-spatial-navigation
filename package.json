@@ -2,7 +2,7 @@
   "name": "vjsn",
   "version": "2.0.14",
   "description": "Vue directive of js-spatial-navigation",
-  "main": "index.js",
+  "main": "lib/index.js",
   "directories": {
     "lib": "lib"
   },
