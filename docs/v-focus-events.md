@@ -12,7 +12,11 @@ Available events
   <li>focused</li>
   <li>navigatefailed</li>
   <li>enter-down</li>
-  <li>enter-up </li>
+  <li>enter-up
+    <ul>
+    <li>This is also triggered by mouse clicks</li>
+    </ul>
+  </li>
 </ol>
 Be aware that using enter-down can trigger the event multiple times when holding down the button. \
 It is recommended to use enter-down/enter-up as button clicks. \
