@@ -5,7 +5,7 @@ Forked from [spacerefugee](https://github.com/spacerefugee/vue-js-spatial-naviga
 ### Updated to be compatible with Vue3
 
 - Added mouse support
-- Added click event trigger key-up on focused element
+- Added enter-up trigger click on focused element
 - Added directive 'v-focus-events' for spatial navigation custom events
 
 Vue directive of [js-spatial-navigation](https://github.com/luke-chang/js-spatial-navigation);
@@ -14,55 +14,57 @@ We will try to stay synced with spacerefugee, but might diverge later on. \
 Our (might not be same as spacerefugee's) goal is to have a library containing the tools you need to create a tv app with Vue for all tv platforms possible. At the moment we have only tested on WebOS & Tizen, we will expand to tvOS & AndroidTV later.
 
 ## TODO
-### Go through commits on 
+
+### Go through commits on
+
 - https://github.com/smart-powers/js-spatial-navigation
-    - Remove jquery
-    - remove iife
-    - replace remaining var to let/const
-    - replace 'extend' functino to spread operator
-    - for in => Object.keys().forEach
-    - etc... -> There is a lot of different things that is worth taking a look at
+  - Remove jquery
+  - remove iife
+  - replace remaining var to let/const
+  - replace 'extend' functino to spread operator
+  - for in => Object.keys().forEach
+  - etc... -> There is a lot of different things that is worth taking a look at
 - https://github.com/alex2844/js-spatial-navigation
-    - add function SpatialNavigation.getSections 
-    - add function SpatialNavigation.move && SpatialNavigation.getSections 
-    - contextmenu -> wtf even is this
-    - fix double load script -> guard clause so it dosnt init twice
+  - add function SpatialNavigation.getSections
+  - add function SpatialNavigation.move && SpatialNavigation.getSections
+  - contextmenu -> wtf even is this
+  - fix double load script -> guard clause so it dosnt init twice
 - https://github.com/germboy/js-spatial-navigation
-    - Add container enable/disable support -> is section disable faulty?
-    - verify next navigable elem before assigning next section id 
+  - Add container enable/disable support -> is section disable faulty?
+  - verify next navigable elem before assigning next section id
 - https://github.com/aarontam/js-spatial-navigation
-    - Add mouse navigation support. -> window listener for mouseover
+  - Add mouse navigation support. -> window listener for mouseover
 - https://github.com/djtsov/js-spatial-navigation !important
-    - Fixed transition from one section to other -> is the current faulty?
-    - Added getSections() public function
-    - Prevent select already focused element
-    - Added focusDelay parameter & Update spatial_navigation.js
+  - Fixed transition from one section to other -> is the current faulty?
+  - Added getSections() public function
+  - Prevent select already focused element
+  - Added focusDelay parameter & Update spatial_navigation.js
 - https://github.com/exozet/js-spatial-navigation
-    - Add new option to be able to ignore inner dimensions check
-    - Change ignoreInnerDimensionValidator to ignoreInnerDimensionValidation 
-    - Add test case file for the offset dimensions offset issue
+  - Add new option to be able to ignore inner dimensions check
+  - Change ignoreInnerDimensionValidator to ignoreInnerDimensionValidation
+  - Add test case file for the offset dimensions offset issue
 - https://github.com/erwanlfrt/js-spatial-navigation
-    - FIX defaultElement with selector
-    - fix bug if no default element is returned by parseSelector
+  - FIX defaultElement with selector
+  - fix bug if no default element is returned by parseSelector
 - https://github.com/egehandulger/js-spatial-navigation
-    - Feature/custom key mapping
-    - Typescript support
-    - Fix/direction
-    - Fix checking event key and keyCode values
+  - Feature/custom key mapping
+  - Typescript support
+  - Fix/direction
+  - Fix checking event key and keyCode values
 - https://github.com/themihai/js-spatial-navigation
-    - fix(onKeyUp): keys with modifiers should be ignored 
-    - fix event handling 
+  - fix(onKeyUp): keys with modifiers should be ignored
+  - fix event handling
 - https://github.com/pertsim/js-spatial-navigation
-    - Added direction dependent enter to capabilities and corresponding dem… 
+  - Added direction dependent enter to capabilities and corresponding dem…
 - https://github.com/miniArray/js-spatial-navigation
-    - update -> looks like a keyboard / mouse input switch
+  - update -> looks like a keyboard / mouse input switch
 - https://github.com/kevinhassan/js-spatial-navigation
-    - -> just converted the project into typescript
+  - -> just converted the project into typescript
 - https://github.com/Ivshti/js-spatial-navigation
-    - Merge branch 'master' of github.com:luke-chang/js-spatial-navigation -> added a commonjs interface
+  - Merge branch 'master' of github.com:luke-chang/js-spatial-navigation -> added a commonjs interface
 - https://github.com/justinbeatz/vue-js-spatial-navigation
-    - Update scroll-behavior-polyfill bug for old browsers
-    - Update repository for scroll-behavior-polyfill
+  - Update scroll-behavior-polyfill bug for old browsers
+  - Update repository for scroll-behavior-polyfill
 
 ## Installation
 
