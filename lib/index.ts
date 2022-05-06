@@ -141,4 +141,6 @@ const vueSpatialNavigation = {
   },
 };
 
+export * from "./options";
+
 export default vueSpatialNavigation;
