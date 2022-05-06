@@ -1,6 +1,9 @@
-# vue-js-spatial-navigation [![npm version](http://img.shields.io/npm/v/vue-js-spatial-navigation.svg?style=flat)](https://npmjs.org/package/vue-js-spatial-navigation "View this project on npm")
+# zome-vjsn (vue-js-spatial-navigation)
 
-Forked from [spacerefugee](https://github.com/spacerefugee/vue-js-spatial-navigation)
+<!-- [![npm version](http://img.shields.io/npm/v/vue-js-spatial-navigation.svg?style=flat)](https://npmjs.org/package/vue-js-spatial-navigation "View this project on npm") -->
+
+Forked from [spacerefugee](https://github.com/spacerefugee/vue-js-spatial-navigation) \
+Original author [luke-chang](https://github.com/luke-chang/js-spatial-navigation)
 
 ### Updated to be compatible with Vue3
 
