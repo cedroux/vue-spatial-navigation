@@ -1,4 +1,5 @@
 import SpatialNavigation, { EVENT_PREFIX } from "./spatial_navigation.js";
+import "./globalExtensions";
 // import "focus-options-polyfill";
 // import "scroll-behavior-polyfill";
 
