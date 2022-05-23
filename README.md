@@ -66,7 +66,7 @@ const globalConfig = {
   navigableFilter: null,
   scrollOptions: { behavior: "smooth", block: "center" },
 };
-Vue.use(vjsn, config);
+Vue.use(vjsn, globalConfig);
 ```
 
 ## Documentation
