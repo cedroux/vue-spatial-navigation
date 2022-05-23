@@ -13,14 +13,80 @@ Original author [luke-chang](https://github.com/luke-chang/js-spatial-navigation
 
 Vue directive of [js-spatial-navigation](https://github.com/luke-chang/js-spatial-navigation);
 
-We will try to stay synced with spacerefugee, but might diverge later on. \
-Our (might not be same as spacerefugee's) goal is to have a library containing the tools you need to create a tv app with Vue for all tv platforms possible. At the moment we have only tested on WebOS & Tizen, we will expand to tvOS & AndroidTV later.
+### Goal
+
+Our goal is to have a library containing the tools you need to create a tv app with Vue for all tv platforms possible. \
+At the moment we have only tested on WebOS & Tizen, we will expand to tvOS & AndroidTV later.
 
 ## Contribution
 
 Feel free to open issues/pull requests. \
 We are open to new features & changes. \
 We are willing to answer questions.
+
+## Installation
+
+### NPM
+
+```shell
+    yarn add https://github.com/Syncronet-APS/zome-vjsn
+```
+
+## Getting Started
+
+```javascript
+import Vue from "vue";
+import vjsn from "zome-vjsn";
+
+Vue.use(vjsn, globalConfig);
+```
+
+#### Optional global [Configuration](https://github.com/luke-chang/js-spatial-navigation#configuration)
+
+#### Additional configuration `scrollOptions`:
+
+- The page will auto scroll to the focus element by using [`scrollIntoView`](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView).
+
+- You can set this `scrollOptions` for the `scrollIntoViewOptions`.
+
+- The page will not scroll to the focus element when setting `scrollOptions` to `""` or `null`.
+
+```javascript
+const globalConfig = {
+  straightOnly: false,
+  straightOverlapThreshold: 0.5,
+  rememberSource: false,
+  disabled: false,
+  defaultElement: "",
+  enterTo: "",
+  leaveFor: null,
+  restrict: "self-first",
+  tabIndexIgnoreList:
+    "a, input, select, textarea, button, iframe, [contentEditable=true]",
+  navigableFilter: null,
+  scrollOptions: { behavior: "smooth", block: "center" },
+};
+Vue.use(vjsn, config);
+```
+
+## Documentation
+
+### `$SpatialNavigation`
+
+A global Vue instance property for [SpatialNavigation](https://github.com/luke-chang/js-spatial-navigation#api-reference);
+
+```javascript
+// you can access SpatialNavigation in every instance
+this.$SpatialNavigation;
+```
+
+### [`v-focus`](https://github.com/Syncronet-APS/vue-js-spatial-navigation/blob/master/docs/v-focus.md)
+
+### [`v-focus-events`](https://github.com/Syncronet-APS/vue-js-spatial-navigation/blob/master/docs/v-focus-events.md)
+
+### [`v-focus-section`](https://github.com/Syncronet-APS/vue-js-spatial-navigation/blob/master/docs/v-focus-section.md)
+
+### [`v-disable-focus-section`](https://github.com/Syncronet-APS/vue-js-spatial-navigation/blob/master/docs/v-disable-focus-section.md)
 
 ## TODO
 
@@ -74,67 +140,3 @@ We are willing to answer questions.
 - https://github.com/justinbeatz/vue-js-spatial-navigation
   - Update scroll-behavior-polyfill bug for old browsers
   - Update repository for scroll-behavior-polyfill
-
-## Installation
-
-### NPM
-
-```shell
-    npm install vue-js-spatial-navigation
-```
-
-## Getting Started
-
-```javascript
-import Vue from "vue";
-import vjsn from "vue-js-spatial-navigation";
-
-Vue.use(vjsn);
-```
-
-#### Optional global [Configuration](https://github.com/luke-chang/js-spatial-navigation#configuration)
-
-#### Additional configuration `scrollOptions`:
-
-- The page will auto scroll to the focus element by using [`scrollIntoView`](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView).
-
-- You can set this `scrollOptions` for the `scrollIntoViewOptions`.
-
-- The page will not scroll to the focus element when setting `scrollOptions` to `""` or `null`.
-
-```javascript
-const config = {
-  straightOnly: false,
-  straightOverlapThreshold: 0.5,
-  rememberSource: false,
-  disabled: false,
-  defaultElement: "",
-  enterTo: "",
-  leaveFor: null,
-  restrict: "self-first",
-  tabIndexIgnoreList:
-    "a, input, select, textarea, button, iframe, [contentEditable=true]",
-  navigableFilter: null,
-  scrollOptions: { behavior: "smooth", block: "center" },
-};
-Vue.use(vjsn, config);
-```
-
-## Documentation
-
-### `$SpatialNavigation`
-
-A global Vue instance property for [SpatialNavigation](https://github.com/luke-chang/js-spatial-navigation#api-reference);
-
-```javascript
-// you can access SpatialNavigation in every instance
-this.$SpatialNavigation;
-```
-
-### [`v-focus`](https://github.com/Syncronet-APS/vue-js-spatial-navigation/blob/master/docs/v-focus.md)
-
-### [`v-focus-events`](https://github.com/Syncronet-APS/vue-js-spatial-navigation/blob/master/docs/v-focus-events.md)
-
-### [`v-focus-section`](https://github.com/Syncronet-APS/vue-js-spatial-navigation/blob/master/docs/v-focus-section.md)
-
-### [`v-disable-focus-section`](https://github.com/Syncronet-APS/vue-js-spatial-navigation/blob/master/docs/v-disable-focus-section.md)
