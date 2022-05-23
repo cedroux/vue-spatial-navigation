@@ -1,7 +1,7 @@
 {
   "name": "zome-vjsn",
-  "version": "2.0.14",
-  "description": "Vue directive of js-spatial-navigation",
+  "version": "1.0.0",
+  "description": "Vue 3 directive of js-spatial-navigation",
   "main": "lib/index.ts",
   "directories": {
     "lib": "lib"
@@ -11,20 +11,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/spacerefugee/vue-js-spatial-navigation.git"
+    "url": "git+https://github.com/Syncronet-APS/zome-vjsn.git"
   },
   "keywords": [
     "vue",
+    "vue3",
     "spatial-navigation",
     "smart-tv",
     "key-navigation"
   ],
-  "author": "Brandon.gh.yang",
+  "author": "bluebazze",
+  "contributors": [
+    "Brandon.gh.yang"
+  ],
   "license": "MPL-2.0",
   "bugs": {
-    "url": "https://github.com/spacerefugee/vue-js-spatial-navigation/issues"
+    "url": "https://github.com/Syncronet-APS/zome-vjsn/issues"
   },
-  "homepage": "https://github.com/spacerefugee/vue-js-spatial-navigation#readme",
+  "homepage": "https://github.com/Syncronet-APS/zome-vjsn#readme",
   "dependencies": {
     "focus-options-polyfill": "^1.6.0",
     "scroll-behavior-polyfill": "^2.0.13"
