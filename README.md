@@ -41,10 +41,9 @@ We are willing to answer questions.
 ## Getting Started
 
 ```javascript
-import Vue from "vue";
 import vjsn from "zome-vjsn";
 
-Vue.use(vjsn, globalConfig);
+app.use(vjsn, globalConfig);
 ```
 
 #### Optional global [Configuration](https://github.com/luke-chang/js-spatial-navigation#configuration)
