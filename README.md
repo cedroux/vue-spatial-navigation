@@ -26,6 +26,12 @@ We are willing to answer questions.
 
 ## Installation
 
+### NPM
+
+```shell
+    no
+```
+
 ### YARN
 
 ```shell
