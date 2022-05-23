@@ -26,7 +26,7 @@ We are willing to answer questions.
 
 ## Installation
 
-### NPM
+### YARN
 
 ```shell
     yarn add https://github.com/Syncronet-APS/zome-vjsn
