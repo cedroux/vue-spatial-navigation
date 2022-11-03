@@ -29,7 +29,7 @@ We are willing to answer questions.
 ### NPM
 
 ```shell
-    no
+    npm install "github:Syncronet-APS/zome-vjsn
 ```
 
 ### YARN
@@ -41,9 +41,9 @@ We are willing to answer questions.
 ## Getting Started
 
 ```javascript
-import vjsn from "zome-vjsn";
+import vueSpatialNavigation from "zome-vjsn";
 
-app.use(vjsn, globalConfig);
+app.use(vueSpatialNavigation, globalConfig);
 ```
 
 #### Optional global [Configuration](https://github.com/luke-chang/js-spatial-navigation#configuration)
@@ -71,7 +71,7 @@ const globalConfig = {
   navigableFilter: null,
   scrollOptions: { behavior: "smooth", block: "center" },
 };
-Vue.use(vjsn, globalConfig);
+Vue.use(vueSpatialNavigation, globalConfig);
 ```
 
 ## Documentation
