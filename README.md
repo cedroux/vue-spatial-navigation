@@ -43,7 +43,7 @@ We are willing to answer questions.
 ```javascript
 import vueSpatialNavigation from "zome-vjsn";
 
-app.use(vueSpatialNavigation, globalConfig);
+app.use(vueSpatialNavigation);
 ```
 
 #### Optional global [Configuration](https://github.com/luke-chang/js-spatial-navigation#configuration)
