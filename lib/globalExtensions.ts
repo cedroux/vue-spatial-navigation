@@ -4,7 +4,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import SpatialNavigation from "./spatial_navigation.js";
+import type { SpatialNavigation } from "./spatial_navigation";
 
 declare module "@vue/runtime-core" {
   export interface ComponentCustomProperties {
