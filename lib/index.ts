@@ -4,12 +4,13 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-import SpatialNavigation, { EVENT_PREFIX } from "./spatial_navigation.js";
+import type { Plugin } from "vue";
+import { SpatialNavigation, EVENT_PREFIX } from "./spatial_navigation";
 import "./globalExtensions";
 // import "focus-options-polyfill";
 // import "scroll-behavior-polyfill";
 
-const vueSpatialNavigation = {
+const vueSpatialNavigation: Plugin = {
   install(Vue, config) {
     const globalConfig = {
       selector: `[data-focusable=true]`,
@@ -20,7 +21,7 @@ const vueSpatialNavigation = {
     // Vue.prototype.$SpatialNavigation = SpatialNavigation;
     Vue.config.globalProperties.$SpatialNavigation = SpatialNavigation;
 
-    const assignConfig = (sectionId, config) => {
+    const assignConfig = (sectionId: string | undefined, config: object) => {
       let sectionConfig = Object.assign({}, globalConfig);
       if (config) {
         Object.assign(sectionConfig, config);
@@ -31,7 +32,7 @@ const vueSpatialNavigation = {
 
     // focus section directive
     Vue.directive("focus-section", {
-      beforeMount(el, binding) {
+      beforeMount(el: HTMLElement, binding) {
         let sectionId = null;
         if (binding.arg) {
           sectionId = binding.arg;
@@ -55,7 +56,7 @@ const vueSpatialNavigation = {
           SpatialNavigation.setDefaultSection(sectionId);
         }
       },
-      updated(el, binding) {
+      updated(el: HTMLElement, binding) {
         let sectionId = el.dataset.sectionId;
         if (binding.arg && sectionId != binding.arg) {
           sectionId = binding.arg;
@@ -72,12 +73,12 @@ const vueSpatialNavigation = {
           }
         }
       },
-      unmounted(el) {
+      unmounted(el: HTMLElement) {
         SpatialNavigation.remove(el.dataset.sectionId);
       },
     });
 
-    const disableSection = (sectionId, disable) => {
+    const disableSection = (sectionId: string | undefined, disable: boolean) => {
       if (disable == false) {
         SpatialNavigation.enable(sectionId);
       } else {
@@ -86,27 +87,27 @@ const vueSpatialNavigation = {
     };
     // diasble focus section directive
     Vue.directive("disable-focus-section", {
-      beforeMount(el, binding) {
+      beforeMount(el: HTMLElement, binding) {
         disableSection(el.dataset.sectionId, binding.value);
       },
-      updated(el, binding) {
+      updated(el: HTMLElement, binding) {
         disableSection(el.dataset.sectionId, binding.value);
       },
     });
 
-    const disableElement = (el, focusable = true) => {
+    const disableElement = (el: HTMLElement, focusable = true) => {
       focusable = focusable == false ? false : true;
       if (!el.dataset.focusable || el.dataset.focusable != focusable + "") {
-        el.dataset.focusable = focusable;
+        el.dataset.focusable = String(focusable);
         if (focusable) el.tabIndex = -1;
       }
     };
     // focusable directive
     Vue.directive("focus", {
-      beforeMount(el, binding) {
+      beforeMount(el: HTMLElement, binding) {
         disableElement(el, binding.value);
       },
-      mounted(el, binding) {
+      mounted(el: HTMLElement, binding) {
         el.addEventListener("mouseenter", function () {
           SpatialNavigation.focus(el);
         });
@@ -114,10 +115,10 @@ const vueSpatialNavigation = {
           el.dispatchEvent(new KeyboardEvent("keydown", { keyCode: 13 }));
         });
       },
-      updated(el, binding) {
+      updated(el: HTMLElement, binding) {
         disableElement(el, binding.value);
       },
-      unmounted(el) {
+      unmounted(el: HTMLElement) {
         el.removeAttribute("data-focusable");
       },
     });
@@ -138,7 +139,7 @@ const vueSpatialNavigation = {
     // At some point we might need the handling of what happens with eventlistener when the binding is updated.
     // This might also be split into different directives to handle remove eventlisteners
     Vue.directive("focus-events", {
-      mounted(el, binding) {
+      mounted(el: HTMLElement, binding) {
         Object.keys(binding.value).forEach((key, i) => {
           if (EVENTS.includes(key))
             el.addEventListener(EVENT_PREFIX + key, binding.value[key]);
