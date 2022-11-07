@@ -1,24 +1,26 @@
-export declare var EVENT_PREFIX: string;
-export declare var SpatialNavigation: {
-  init(): void;
-  uninit(): void;
-  clear(): void;
-  reset(sectionId?: string): void;
-  set(config?: object);
-  set(sectionId?: string, config?: object): void;
-  add(config?: object): string;
-  add(sectionId?: string, config?: object): string;
-  remove(sectionId?: string): boolean;
-  disable(sectionId?: string): boolean;
-  enable(sectionId?: string): boolean;
-  pause(): void;
-  resume(): void;
-  focus(silent: boolean = false);
-  focus(sectionId?: string, silent: boolean = false);
-  focus(extSelector?: unknown, silent: boolean = false): HTMLElement;
-  move(direction: "left" | "up" | "right" | "down", selector?: HTMLElement): boolean | HTMLElement;
-  makeFocusable(sectionId?: string): void;
-  setDefaultSection(sectionId?: string): void;
-};
+/// <reference lib="dom" />
 
-export { };
+declare namespace SpatialNavigation {
+  function init(): void;
+  function uninit(): void;
+  function clear(): void;
+  function reset(sectionId?: string): void;
+  function set(config?: object): void;
+  function set(sectionId?: string, config?: object): void;
+  function add(config?: object): string;
+  function add(sectionId?: string, config?: object): string;
+  function remove(sectionId?: string): boolean;
+  function disable(sectionId?: string): boolean;
+  function enable(sectionId?: string): boolean;
+  function pause(): void;
+  function resume(): void;
+  function focus(silent?: boolean): HTMLElement;
+  function focus(sectionId?: string, silent?: boolean): HTMLElement;
+  function focus(extSelector?: unknown, silent?: boolean): HTMLElement;
+  function move(direction: "left" | "up" | "right" | "down", selector?: HTMLElement): boolean | HTMLElement;
+  function makeFocusable(sectionId?: string): void;
+  function setDefaultSection(sectionId?: string): void;
+}
+
+export const EVENT_PREFIX: string;
+export default SpatialNavigation;
