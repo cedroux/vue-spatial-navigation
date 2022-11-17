@@ -31,7 +31,7 @@ const vueSpatialNavigation: Plugin = {
     // focus section directive
     Vue.directive("focus-section", {
       beforeMount(el: HTMLElement, binding) {
-        let sectionId = null;
+        let sectionId: string;
         if (binding.arg) {
           sectionId = binding.arg;
           try {
