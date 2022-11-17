@@ -1,17 +1,10 @@
 {
   "name": "vue-spatial-nav",
   "version": "1.0.0",
-  "description": "Vue 3 directive of js-spatial-navigation",
+  "description": "Vue 3 directives for spatial navigation",
   "main": "lib/index.ts",
   "directories": {
     "lib": "lib"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Syncronet-APS/zome-vjsn.git"
   },
   "keywords": [
     "vue",
@@ -20,17 +13,5 @@
     "smart-tv",
     "key-navigation"
   ],
-  "author": "bluebazze",
-  "contributors": [
-    "Brandon.gh.yang"
-  ],
-  "license": "MPL-2.0",
-  "bugs": {
-    "url": "https://github.com/Syncronet-APS/zome-vjsn/issues"
-  },
-  "homepage": "https://github.com/Syncronet-APS/zome-vjsn#readme",
-  "dependencies": {
-    "focus-options-polyfill": "^1.6.0",
-    "scroll-behavior-polyfill": "^2.0.13"
-  }
+  "license": "MPL-2.0"
 }

@@ -7,8 +7,6 @@
 import type { Plugin } from "vue";
 import SpatialNavigation, { EVENT_PREFIX } from "./spatial_navigation";
 import "./globalExtensions";
-// import "focus-options-polyfill";
-// import "scroll-behavior-polyfill";
 
 const vueSpatialNavigation: Plugin = {
   install(Vue, config) {
