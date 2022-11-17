@@ -1,4 +1,4 @@
-# vue-spatial-navigation
+# vue-spatial-nav
 
 <!-- [![npm version](http://img.shields.io/npm/v/vue-js-spatial-navigation.svg?style=flat)](https://npmjs.org/package/vue-js-spatial-navigation "View this project on npm") -->
 
@@ -29,13 +29,7 @@ We are willing to answer questions.
 ### NPM
 
 ```shell
-    npm install "github:cedroux/vue-spatial-navigation
-```
-
-### YARN
-
-```shell
-    yarn add https://github.com/cedroux/vue-spatial-navigation
+    npm install vue-spatial-nav
 ```
 
 ## Getting Started
