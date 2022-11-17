@@ -1,5 +1,5 @@
 {
-  "name": "vue-spatial-navigation",
+  "name": "vue-spatial-nav",
   "version": "1.0.0",
   "description": "Vue 3 directive of js-spatial-navigation",
   "main": "lib/index.ts",
