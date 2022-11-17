@@ -1,5 +1,5 @@
 {
-  "name": "zome-vjsn",
+  "name": "vue-spatial-navigation",
   "version": "1.0.0",
   "description": "Vue 3 directive of js-spatial-navigation",
   "main": "lib/index.ts",
