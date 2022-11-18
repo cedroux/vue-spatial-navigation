@@ -29,7 +29,7 @@ We are willing to answer questions.
 ### NPM
 
 ```shell
-    npm install vue-spatial-nav
+npm install vue-spatial-nav
 ```
 
 ## Getting Started
