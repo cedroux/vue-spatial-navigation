@@ -93,7 +93,7 @@ this.$SpatialNavigation;
 
 ### Go through commits on
 
-- https://github.com/smart-powers/js-spatial-navigation
+- https://www.npmjs.com/package/@smart-powers/js-spatial-navigation
   - remove iife
   - replace remaining var to let/const
   - replace 'extend' functino to spread operator
@@ -118,25 +118,17 @@ this.$SpatialNavigation;
   - Add new option to be able to ignore inner dimensions check
   - Change ignoreInnerDimensionValidator to ignoreInnerDimensionValidation
   - Add test case file for the offset dimensions offset issue
-- https://github.com/erwanlfrt/js-spatial-navigation
-  - FIX defaultElement with selector
-  - fix bug if no default element is returned by parseSelector
 - https://github.com/egehandulger/js-spatial-navigation
   - Feature/custom key mapping
   - Typescript support
   - Fix/direction
   - Fix checking event key and keyCode values
-- https://github.com/themihai/js-spatial-navigation
-  - fix(onKeyUp): keys with modifiers should be ignored
-  - fix event handling
 - https://github.com/pertsim/js-spatial-navigation
   - Added direction dependent enter to capabilities and corresponding dem…
 - https://github.com/miniArray/js-spatial-navigation
   - update -> looks like a keyboard / mouse input switch
 - https://github.com/kevinhassan/js-spatial-navigation
   - -> just converted the project into typescript
-- https://github.com/Ivshti/js-spatial-navigation
-  - Merge branch 'master' of github.com:luke-chang/js-spatial-navigation -> added a commonjs interface
 - https://github.com/justinbeatz/vue-js-spatial-navigation
   - Update scroll-behavior-polyfill bug for old browsers
   - Update repository for scroll-behavior-polyfill
