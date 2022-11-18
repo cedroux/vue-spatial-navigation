@@ -94,7 +94,6 @@ this.$SpatialNavigation;
 ### Go through commits on
 
 - https://github.com/smart-powers/js-spatial-navigation
-  - Remove jquery
   - remove iife
   - replace remaining var to let/const
   - replace 'extend' functino to spread operator
