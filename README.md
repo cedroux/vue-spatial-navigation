@@ -35,7 +35,7 @@ We are willing to answer questions.
 ## Getting Started
 
 ```javascript
-import vueSpatialNavigation from "zome-vjsn";
+import vueSpatialNavigation from "vue-spatial-nav";
 
 app.use(vueSpatialNavigation);
 ```
@@ -51,6 +51,8 @@ app.use(vueSpatialNavigation);
 - The page will not scroll to the focus element when setting `scrollOptions` to `""` or `null`.
 
 ```javascript
+import vueSpatialNavigation from "vue-spatial-nav";
+
 const globalConfig = {
   straightOnly: false,
   straightOverlapThreshold: 0.5,
