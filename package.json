@@ -13,7 +13,16 @@
     "smart-tv",
     "key-navigation"
   ],
+  "homepage": "https://github.com/cedroux/vue-spatial-nav",
+  "author": "https://github.com/cedroux/vue-spatial-nav/graphs/contributors",
   "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cedroux/vue-spatial-nav.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cedroux/vue-spatial-nav/issues"
+  },
   "devDependencies": {
     "vue": "^3.2.0"
   }
