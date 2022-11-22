@@ -106,11 +106,12 @@ const vueSpatialNavigation: Plugin = {
         disableElement(el, binding.value);
       },
       mounted(el: HTMLElement, binding) {
-        el.addEventListener("mouseenter", function () {
-          SpatialNavigation.focus(el);
-        });
-        el.addEventListener("click", function (e) {
-          el.dispatchEvent(new KeyboardEvent("keydown", { keyCode: 13 }));
+        el.addEventListener("mousedown", () => {
+          if (el === document.activeElement) {
+            el.dispatchEvent(new KeyboardEvent("keydown", { keyCode: 13 }));
+          } else {
+            SpatialNavigation.focus(el);
+          }
         });
       },
       updated(el: HTMLElement, binding) {
