@@ -34,7 +34,7 @@ npm install vue-spatial-nav
 
 ## Getting Started
 
-```javascript
+```ts
 import vueSpatialNavigation from "vue-spatial-nav";
 
 app.use(vueSpatialNavigation);
@@ -50,7 +50,7 @@ app.use(vueSpatialNavigation);
 
 - The page will not scroll to the focus element when setting `scrollOptions` to `""` or `null`.
 
-```javascript
+```ts
 import vueSpatialNavigation from "vue-spatial-nav";
 
 const globalConfig = {
@@ -72,13 +72,22 @@ Vue.use(vueSpatialNavigation, globalConfig);
 
 ## Documentation
 
-### `$SpatialNavigation`
+### Global SpatialNavigation instance
 
 A global Vue instance property for [SpatialNavigation](https://github.com/luke-chang/js-spatial-navigation#api-reference);
 
-```javascript
-// you can access SpatialNavigation in every instance
+You can access SpatialNavigation in every instance
+```ts
 this.$SpatialNavigation;
+```
+
+or with the inject() function
+```vue
+<script setup>
+import { inject } from 'vue'
+
+const spatialNavigation = inject('spatialNavigation');
+</script>
 ```
 
 ### [`v-focus`](https://github.com/Syncronet-APS/vue-js-spatial-navigation/blob/master/docs/v-focus.md)

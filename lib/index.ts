@@ -16,8 +16,9 @@ const vueSpatialNavigation: Plugin = {
     Object.assign(globalConfig, config);
     SpatialNavigation.init();
     SpatialNavigation.set(globalConfig);
-    // Vue.prototype.$SpatialNavigation = SpatialNavigation;
+
     Vue.config.globalProperties.$SpatialNavigation = SpatialNavigation;
+    Vue.provide('spatialNavigation', SpatialNavigation);
 
     const assignConfig = (sectionId: string | undefined, config: object) => {
       let sectionConfig = Object.assign({}, globalConfig);
