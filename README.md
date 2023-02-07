@@ -35,7 +35,7 @@ npm install vue-spatial-nav
 ## Getting Started
 
 ```ts
-import vueSpatialNavigation from "vue-spatial-nav";
+import vueSpatialNavigation from 'vue-spatial-nav';
 
 app.use(vueSpatialNavigation);
 ```
@@ -48,24 +48,26 @@ app.use(vueSpatialNavigation);
 
 - You can set this `scrollOptions` for the `scrollIntoViewOptions`.
 
-- The page will not scroll to the focus element when setting `scrollOptions` to `""` or `null`.
+- The page will not scroll to the focus element when setting `scrollOptions` to `''` or `null`.
 
 ```ts
-import vueSpatialNavigation from "vue-spatial-nav";
+import vueSpatialNavigation from 'vue-spatial-nav';
 
 const globalConfig = {
   straightOnly: false,
   straightOverlapThreshold: 0.5,
   rememberSource: false,
   disabled: false,
-  defaultElement: "",
-  enterTo: "",
+  defaultElement: '',
+  enterTo: '',
   leaveFor: null,
-  restrict: "self-first",
-  tabIndexIgnoreList:
-    "a, input, select, textarea, button, iframe, [contentEditable=true]",
+  restrict: 'self-first',
+  tabIndexIgnoreList: 'a, input, select, textarea, button, iframe, [contentEditable=true]',
   navigableFilter: null,
-  scrollOptions: { behavior: "smooth", block: "center" },
+  scrollOptions: {
+    behavior: 'smooth',
+    block: 'center',
+  },
 };
 Vue.use(vueSpatialNavigation, globalConfig);
 ```
@@ -116,8 +118,6 @@ const spatialNavigation = inject('spatialNavigation');
 - https://github.com/germboy/js-spatial-navigation
   - Add container enable/disable support -> is section disable faulty?
   - verify next navigable elem before assigning next section id
-- https://github.com/aarontam/js-spatial-navigation
-  - Add mouse navigation support. -> window listener for mouseover
 - https://github.com/djtsov/js-spatial-navigation !important
   - Fixed transition from one section to other -> is the current faulty?
   - Added getSections() public function
