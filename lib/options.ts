@@ -4,16 +4,18 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
+type Selector = string;
+
 export interface vjsnOptions {
   /**
    * #### `selector`
 
-  + Type: [Selector](#selector-1)
+  + Type: Selector
   + Default: `''`
 
   Elements matching `selector` are regarded as navigable elements in SpatialNavigation. However, hidden or disabled elements are ignored as they can not be focused in any way.
    */
-  selector?: string;
+  selector?: Selector;
 
   /**
    * #### `straightOnly`
@@ -61,17 +63,17 @@ When it is `true`, elements defined in this section are unnavigable. This proper
   /**
    * #### `defaultElement`
 
-  + Type: [Selector](#selector-1) (without @ syntax)
+  + Type: Selector (without @ syntax)
   + Default: `''`
 
 When a section is specified to be the next focused target, e.g. [`focus('some-section-id')`](#spatialnavigationfocussectionidselector-silent) is called, the first navigable element matching `defaultElement` within this section will be chosen first.
    */
-  defaultElement?: string;
+  defaultElement?: Selector;
 
   /**
    * #### `enterTo`
 
-  + Type: `''`, `'last-focused'` or `'default-element'`
+  + Type: Selector, `''`, `'last-focused'` or `'default-element'`
   + Default: `''`
 
 If the focus comes from another section, you can define which element in this section should be focused first.
@@ -82,7 +84,7 @@ If the focus comes from another section, you can define which element in this se
 
 `''` (empty string) implies following the original rule without any change.
    */
-  enterTo?: '' | 'last-focused' | 'default-element';
+  enterTo?: Selector | '' | 'last-focused' | 'default-element';
 
   /**
    * #### `leaveFor`
@@ -92,16 +94,16 @@ If the focus comes from another section, you can define which element in this se
 
 This property specifies which element should be focused next when a user presses the corresponding arrow key and intends to leave the current section.
 
-It should be a PlainObject consists of four properties: `'left'`, `'right'`, `'up'` and `'down'`. Each property should be a [Selector](#selector-1). Any of these properties can be omitted, and SpatialNavigation will follow the original rule to navigate.
+It should be a PlainObject consists of four properties: `'left'`, `'right'`, `'up'` and `'down'`. Each property should be a Selector. Any of these properties can be omitted, and SpatialNavigation will follow the original rule to navigate.
 
 **Note:** Assigning `false` or `null` to any of these properties makes SpatialNavigation go nowhere at that direction.
 
    */
   leaveFor?: {
-    left?: string | false | null;
-    right?: string | false | null;
-    up?: string | false | null;
-    down?: string | false | null;
+    left?: Selector | false | null;
+    right?: Selector | false | null;
+    up?: Selector | false | null;
+    down?: Selector | false | null;
   };
 
   /**
