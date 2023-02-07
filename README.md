@@ -1,6 +1,6 @@
 # vue-spatial-nav
 
-<!-- [![npm version](http://img.shields.io/npm/v/vue-js-spatial-navigation.svg?style=flat)](https://npmjs.org/package/vue-js-spatial-navigation "View this project on npm") -->
+![npm](https://img.shields.io/npm/v/vue-spatial-nav?style=flat-square)
 
 Forked from [Syncronet-APS/zome-vjsn](https://github.com/Syncronet-APS/zome-vjsn) and [spacerefugee/vue-js-spatial-navigation](https://github.com/spacerefugee/vue-js-spatial-navigation) \
 Original author [luke-chang](https://github.com/luke-chang/js-spatial-navigation)
@@ -69,6 +69,7 @@ const globalConfig = {
     block: 'center',
   },
 };
+
 Vue.use(vueSpatialNavigation, globalConfig);
 ```
 
@@ -92,13 +93,13 @@ const spatialNavigation = inject('spatialNavigation');
 </script>
 ```
 
-### [`v-focus`](https://github.com/Syncronet-APS/vue-js-spatial-navigation/blob/master/docs/v-focus.md)
+### [`v-focus`](docs/v-focus.md)
 
-### [`v-focus-events`](https://github.com/Syncronet-APS/vue-js-spatial-navigation/blob/master/docs/v-focus-events.md)
+### [`v-focus-events`](docs/v-focus-events.md)
 
-### [`v-focus-section`](https://github.com/Syncronet-APS/vue-js-spatial-navigation/blob/master/docs/v-focus-section.md)
+### [`v-focus-section`](docs/v-focus-section.md)
 
-### [`v-disable-focus-section`](https://github.com/Syncronet-APS/vue-js-spatial-navigation/blob/master/docs/v-disable-focus-section.md)
+### [`v-disable-focus-section`](docs/v-disable-focus-section.md)
 
 ## TODO
 
