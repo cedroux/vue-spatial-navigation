@@ -1,6 +1,6 @@
 # vue-spatial-nav
 
-![npm](https://img.shields.io/npm/v/vue-spatial-nav?style=flat-square)
+[![npm](https://img.shields.io/npm/v/vue-spatial-nav?style=flat-square)](https://www.npmjs.com/package/vue-spatial-nav)
 
 Forked from [Syncronet-APS/zome-vjsn](https://github.com/Syncronet-APS/zome-vjsn) and [spacerefugee/vue-js-spatial-navigation](https://github.com/spacerefugee/vue-js-spatial-navigation) \
 Original author [luke-chang](https://github.com/luke-chang/js-spatial-navigation)
