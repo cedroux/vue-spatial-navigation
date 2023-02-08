@@ -1,6 +1,5 @@
 import type { Plugin } from "vue";
 import SpatialNavigation, { EVENT_PREFIX } from "./spatial_navigation";
-import "./globalExtensions";
 
 const vueSpatialNavigation: Plugin = {
   install(Vue, config) {
@@ -89,7 +88,7 @@ const vueSpatialNavigation: Plugin = {
     });
 
     const disableElement = (el: HTMLElement, focusable = true) => {
-      focusable = focusable == false ? false : true;
+      focusable = focusable != false;
       if (!el.dataset.focusable || el.dataset.focusable != focusable + "") {
         el.dataset.focusable = String(focusable);
         if (focusable) el.tabIndex = -1;
@@ -103,9 +102,9 @@ const vueSpatialNavigation: Plugin = {
       mounted(el: HTMLElement, binding) {
         el.addEventListener("mousedown", () => {
           if (el === document.activeElement) {
-            el.dispatchEvent(new KeyboardEvent("keydown", { keyCode: 13 }));
-          } else {
-            SpatialNavigation.focus(el);
+            el.dispatchEvent(new KeyboardEvent("keydown", {
+              key: "Enter",
+            }));
           }
         });
       },
