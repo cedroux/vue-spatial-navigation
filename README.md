@@ -1,21 +1,20 @@
-# vue-spatial-nav
+# Vue Spatial Navigation
 
 [![npm](https://img.shields.io/npm/v/vue-spatial-nav?style=flat-square)](https://www.npmjs.com/package/vue-spatial-nav)
 
 Forked from [Syncronet-APS/zome-vjsn](https://github.com/Syncronet-APS/zome-vjsn) and [spacerefugee/vue-js-spatial-navigation](https://github.com/spacerefugee/vue-js-spatial-navigation) \
 Original author [luke-chang](https://github.com/luke-chang/js-spatial-navigation)
 
-### Updated to be compatible with Vue3
+### Vue directive of [js-spatial-navigation](https://github.com/luke-chang/js-spatial-navigation)
 
+- Compatible with Vue3
 - Added mouse support
 - Added enter-up trigger click on focused element
 - Added directive 'v-focus-events' for spatial navigation custom events
 
-Vue directive of [js-spatial-navigation](https://github.com/luke-chang/js-spatial-navigation);
-
 ### Goal
 
-Our goal is to have a library containing the tools you need to create a tv app with Vue for all tv platforms possible. \
+Our goal is to have a library containing the tools you need to create a TV app with Vue for all platforms possible. \
 At the moment we have only tested on WebOS & Tizen, we will expand to tvOS & AndroidTV later.
 
 ## Contribution
