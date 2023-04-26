@@ -1,8 +1,9 @@
-import type { Plugin } from "vue";
-import SpatialNavigation, { EVENT_PREFIX } from "./spatial_navigation";
+import type { DirectiveBinding } from 'vue';
+import SpatialNavigation, { EVENT_PREFIX } from './spatial_navigation';
+import type { vjsnOptions } from './options';
 
-const vueSpatialNavigation: Plugin = {
-  install(Vue, config) {
+const vueSpatialNavigation = {
+  install(vue: any, config: vjsnOptions) {
     const globalConfig = {
       selector: `[data-focusable=true]`,
     };
@@ -10,8 +11,8 @@ const vueSpatialNavigation: Plugin = {
     SpatialNavigation.init();
     SpatialNavigation.set(globalConfig);
 
-    Vue.config.globalProperties.$SpatialNavigation = SpatialNavigation;
-    Vue.provide('spatialNavigation', SpatialNavigation);
+    vue.config.globalProperties.$SpatialNavigation = SpatialNavigation;
+    vue.provide('spatialNavigation', SpatialNavigation);
 
     const assignConfig = (sectionId: string | undefined, config: object) => {
       let sectionConfig = Object.assign({}, globalConfig);
@@ -23,8 +24,8 @@ const vueSpatialNavigation: Plugin = {
     };
 
     // focus section directive
-    Vue.directive("focus-section", {
-      beforeMount(el: HTMLElement, binding) {
+    vue.directive('focus-section', {
+      beforeMount(el: HTMLElement, binding: DirectiveBinding) {
         let sectionId: string;
         if (binding.arg) {
           sectionId = binding.arg;
@@ -41,14 +42,14 @@ const vueSpatialNavigation: Plugin = {
         el.dataset.sectionId = sectionId;
         SpatialNavigation.set(
           sectionId,
-          assignConfig(sectionId, binding.value)
+          assignConfig(sectionId, binding.value),
         );
         // set default section
         if (binding.modifiers.default) {
           SpatialNavigation.setDefaultSection(sectionId);
         }
       },
-      updated(el: HTMLElement, binding) {
+      updated(el: HTMLElement, binding: DirectiveBinding) {
         let sectionId = el.dataset.sectionId;
         if (binding.arg && sectionId != binding.arg) {
           sectionId = binding.arg;
@@ -60,7 +61,7 @@ const vueSpatialNavigation: Plugin = {
           } catch (error) {
             SpatialNavigation.add(
               sectionId,
-              assignConfig(sectionId, binding.value)
+              assignConfig(sectionId, binding.value),
             );
           }
         }
@@ -78,61 +79,61 @@ const vueSpatialNavigation: Plugin = {
       }
     };
     // diasble focus section directive
-    Vue.directive("disable-focus-section", {
-      beforeMount(el: HTMLElement, binding) {
+    vue.directive('disable-focus-section', {
+      beforeMount(el: HTMLElement, binding: DirectiveBinding) {
         disableSection(el.dataset.sectionId, binding.value);
       },
-      updated(el: HTMLElement, binding) {
+      updated(el: HTMLElement, binding: DirectiveBinding) {
         disableSection(el.dataset.sectionId, binding.value);
       },
     });
 
     const disableElement = (el: HTMLElement, focusable = true) => {
       focusable = focusable != false;
-      if (!el.dataset.focusable || el.dataset.focusable != focusable + "") {
+      if (!el.dataset.focusable || el.dataset.focusable != focusable + '') {
         el.dataset.focusable = String(focusable);
         if (focusable) el.tabIndex = -1;
       }
     };
     // focusable directive
-    Vue.directive("focus", {
-      beforeMount(el: HTMLElement, binding) {
+    vue.directive('focus', {
+      beforeMount(el: HTMLElement, binding: DirectiveBinding) {
         disableElement(el, binding.value);
       },
-      mounted(el: HTMLElement, binding) {
-        el.addEventListener("mousedown", () => {
+      mounted(el: HTMLElement, binding: DirectiveBinding) {
+        el.addEventListener('mousedown', (e) => {
           if (el === document.activeElement) {
-            el.dispatchEvent(new KeyboardEvent("keydown", {
-              key: "Enter",
+            el.dispatchEvent(new KeyboardEvent('keydown', {
+              key: 'Enter',
             }));
           }
         });
       },
-      updated(el: HTMLElement, binding) {
+      updated(el: HTMLElement, binding: DirectiveBinding) {
         disableElement(el, binding.value);
       },
       unmounted(el: HTMLElement) {
-        el.removeAttribute("data-focusable");
+        el.removeAttribute('data-focusable');
       },
     });
 
     // It can be expensive to check through this list for every events registered for every button.
     // With typescript this could be done with typedefinition
     const EVENTS = [
-      "willmove",
-      "willunfocus",
-      "unfocused",
-      "willfocus",
-      "focused",
-      "navigatefailed",
-      "enter-down",
-      "enter-up",
+      'willmove',
+      'willunfocus',
+      'unfocused',
+      'willfocus',
+      'focused',
+      'navigatefailed',
+      'enter-down',
+      'enter-up',
     ];
 
     // At some point we might need the handling of what happens with eventlistener when the binding is updated.
     // This might also be split into different directives to handle remove eventlisteners
-    Vue.directive("focus-events", {
-      mounted(el: HTMLElement, binding) {
+    vue.directive('focus-events', {
+      mounted(el: HTMLElement, binding: DirectiveBinding) {
         Object.keys(binding.value).forEach((key, i) => {
           if (EVENTS.includes(key))
             el.addEventListener(EVENT_PREFIX + key, binding.value[key]);
@@ -142,6 +143,6 @@ const vueSpatialNavigation: Plugin = {
   },
 };
 
-export * from "./options";
+export * from './options';
 
 export default vueSpatialNavigation;
