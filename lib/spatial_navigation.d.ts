@@ -20,6 +20,7 @@ declare namespace SpatialNavigation {
   function move(direction: "left" | "up" | "right" | "down", selector?: HTMLElement): boolean | HTMLElement;
   function makeFocusable(sectionId?: string): void;
   function setDefaultSection(sectionId?: string): void;
+  function getCurrentFocusedElement(): HTMLElement;
 }
 
 export const EVENT_PREFIX: string;
