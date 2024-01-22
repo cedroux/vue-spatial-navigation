@@ -77,7 +77,7 @@ Vue.use(vueSpatialNavigation, globalConfig);
 
 ### Global SpatialNavigation instance
 
-A global Vue instance property for [SpatialNavigation](https://github.com/luke-chang/js-spatial-navigation#api-reference);
+A global Vue instance property for [SpatialNavigation](https://github.com/luke-chang/js-spatial-navigation#api-reference)
 
 You can access SpatialNavigation in every instance
 ```ts
@@ -87,7 +87,7 @@ this.$SpatialNavigation;
 or with the inject() function
 ```vue
 <script setup>
-import { inject } from 'vue'
+import { inject } from 'vue';
 
 const spatialNavigation = inject('spatialNavigation');
 </script>
